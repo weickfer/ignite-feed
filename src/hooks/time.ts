@@ -2,8 +2,7 @@ import { useState, useEffect } from 'react'
 import { formatDistanceToNow } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
 
-
-export function useTime(date, delay = 30000) {
+export function useTime(date: Date, delay = 30000) {
   const [watchedDate, setWatchedDate] = useState(() => {
     return formatDistanceToNow(date, {
       locale: ptBR,
